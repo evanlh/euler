@@ -2,9 +2,11 @@
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"""
 
+from math import sqrt
+
 def primes_up_to(n):
 	""" Returns a list of all the prime numbers less than or equal to n. Brute-force, don't use for large n."""
-	return [ x for x in range(2,n + 1) if sum([y for y in range(2, x) if x % y == 0]) == 0]
+	return [ x for x in range(2,n + 1) if sum([y for y in range(2, int(round(sqrt(x)))) if x % y == 0]) == 0]
 
 if __name__ == "__main__":
 	""" my general approach: 1) find the maximum power of each prime that divides evenly into the dividers, thus avoiding a prime factor decomposition 3) multiply them together. """
