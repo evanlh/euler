@@ -6,6 +6,8 @@ def test(a, b, c):
 		return False
 
 if __name__== "__main__":
+	""" BAD! HORRIBLE! BRUTE-FORCE! But hey, that's what computers are for..."""
+
 	c, b, a = 1000, 1000, 1000
 	while c > 0 and not test(a, b, c):
 		c-=1
