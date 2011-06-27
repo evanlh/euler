@@ -45,8 +45,8 @@ def primes_sieve(n):
 
 if __name__ == "__main__":
 	print sum(primes_sieve (2000000))
-	for i in range(1,100):
+	"""for i in range(1,100):
 		stmt = "from euler10 import primes_sieve\nprimes_sieve(" + str(i * 100000) + ")"
 		print i * 100000, timeit.Timer(stmt, 'gc.enable()').timeit(1)
 
-
+	"""
