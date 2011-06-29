@@ -1,7 +1,7 @@
 """Find the sum of all the primes below two million."""
 from math import sqrt
 def primes_up_to(n):
-	"""More efficient way of finding the primes below n"""
+	"""Somewhat efficient way of finding the primes up to n for small n"""
 	primes = [2]
 	i =	max(primes) + 1 
 	halt = sqrt(n)
@@ -9,7 +9,7 @@ def primes_up_to(n):
 		for p in primes:
 			if i % p == 0:
 				break
-			if p > halt:
+			if p >= halt:
 				primes.append(i)
 				break
 		else:
