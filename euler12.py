@@ -1,11 +1,12 @@
-from math import sqrt
+""" First brute-force attempt at a solution to problem 12, What is the value of the first triangle number to have over five hundred divisors? """
+
+from math import sqrt, log
 
 def nth_triangle (n):
 	accum = n
-	n -= 1
 	while n > 0:
-		accum += n
 		n -= 1
+		accum += n
 
 	return accum
 
@@ -32,7 +33,9 @@ if __name__ == "__main__":
 	count = 0
 	while count < 500:
 		t = nth_triangle(i)
-		count = len(divisors(t))
-		print i, t, count
+		d = divisors(t)
+		count = len(d)
+		if count >= 500:
+			print i, t, count, log(t)
 		i += 1
 
