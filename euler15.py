@@ -1,7 +1,7 @@
-""" The number of paths through a grid of size gridsize can be represented
+""" The paths through a grid of size gridsize can be represented
 	as a string of bits of length 2*gridsize, where 1 increments y
 	and 0 increments x, and where there are always an even number of
-	1's and 0's. The number of unique combinations of these bits is given
+	1's and 0's. The number of unique combinations of these paths is given
 	by the combination formula, 2*gridsize taken gridsize at a time, or:
 	(2*gridsize)! / (gridsize!)^2 """
 
